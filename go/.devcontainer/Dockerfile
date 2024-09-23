@@ -1,11 +1,11 @@
-FROM golang:1.23-alpine3.20
+FROM golang:1.23-bookworm
 
 # Install required packages for neovim
-
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y \
+    neovim \
+    python3 \
+    python3-pip \
+    jq \
     curl \
     git \
-    jq \
-    neovim \
-    npm \
-    zsh
+    npm

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
+  "name": "Python Development Container Template",
+  "dockerFile": "Dockerfile",
+  "features": {
+    "ghcr.io/duduribeiro/devcontainer-features/neovim:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "mounts": [
+    "type=bind,source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,consistency=cached"
+  ],
+  "remoteUser": "vscode"
+}
